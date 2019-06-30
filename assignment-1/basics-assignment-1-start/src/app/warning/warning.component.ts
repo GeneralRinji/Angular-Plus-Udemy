@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-warning',
   templateUrl: './warning/warning.component.html',

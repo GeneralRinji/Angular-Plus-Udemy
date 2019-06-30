@@ -1,16 +1,38 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <ol>
-        <li>Create two new Components (manually or with CLI): WarningAlert and SuccessAlert</li>
-        <li>Output them beneath each other in the AppComponent</li>
-        <li>Output a warning or success message in the Components</li>
-        <li>Style the Components appropriately (maybe some red/ green text?)</li>
-      </ol>
-      <p>Use external or internal templates and styles!</p>
-      <p>Feel free to create more components, nest them into each other or play around with different types of selectors!</p>
+<!DOCTYPE html>
+<html data-ng-app="drahak.alerts">
+	<head>
+		<title>Assignmetn 1</title>
+    <script>
+      import { AlertsService } from 'angular-alert-module';
       
+      //and add a line in constructor to get services instance
+        
+        constructor(private alerts: AlertsService) { }
+        
+      //then use it like this - I've made it for ngOnInit and you can use it anywhere in component
+      ngOnInit() {
+          this.alerts.setMessage('All the fields are required','error');
+          this.alerts.setMessage('Configurations saved successfully!','success');
+          this.alerts.setMessage('Please save all the changes before closing','warn');
+        }
+    </script>
+  </head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ol>
+          <li>Create two new Components (manually or with CLI): WarningAlert and SuccessAlert</li>
+          <li>Output them beneath each other in the AppComponent</li>
+          <li>Output a warning or success message in the Components</li>
+          <li>Style the Components appropriately (maybe some red/ green text?)</li>
+        </ol>
+        <p>Use external or internal templates and styles!</p>
+        <p>Feel free to create more components, nest them into each other or play around with different types of selectors!</p>
+        
+      </div>
     </div>
   </div>
-</div>
+</body>
+</html>
 
