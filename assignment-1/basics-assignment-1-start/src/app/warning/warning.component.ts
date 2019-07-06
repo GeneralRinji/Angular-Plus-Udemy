@@ -10,7 +10,7 @@ export class WarningComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    alert("Warning!");
+    // alert("Warning!");  // this is a test. Works.
   }
 
 }

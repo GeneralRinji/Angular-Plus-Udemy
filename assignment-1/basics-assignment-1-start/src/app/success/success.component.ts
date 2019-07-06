@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: '<app-success>',
-  templateUrl: './success.component.html'
+  templateUrl: './success.component.html',
+  styleUrls: ['./success.component.css']
 })
 
 export class SuccessComponent implements OnInit {
@@ -10,7 +11,7 @@ export class SuccessComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    alert("Success.");
+    // alert("Success.");  //This is a test. Works.
   }
 
 }
